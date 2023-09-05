@@ -24,6 +24,9 @@ Route::get('home', [NiitController::class, 'index']);
 
 Route::post('niits', [NiitController::class, 'createNiit']);
 
+Route::get('niits', [NiitController::class, 'allNiit']);
+
+
 
 
 

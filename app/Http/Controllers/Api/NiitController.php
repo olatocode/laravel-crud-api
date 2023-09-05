@@ -75,8 +75,28 @@ class NiitController extends Controller
         // }
 
 
+     
+
+
 
     }
+
+       public function allNiit (){
+
+            $niitUsers = niit::find();
+
+            if ($niitUsers > 0) {
+                      return response()->json([
+             'status' => 200,
+             'message'=> 'Niits view successfully'
+        ], 200);
+            } else {
+                             return response()->json([
+             'status' => 404,
+             'message'=> 'Niit not found'
+        ], 404);
+            }
+        }
 }
 
 
